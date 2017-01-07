@@ -20,18 +20,18 @@ INSERT INTO FLIGHT_TYPE VALUES ('CHARTER');
 
 -- ### INSERTING MOCKUP DATA ###
 
-INSERT INTO PROJECT VALUES (1, 'Simullations Europe', 'Flight routes of europe.');
-INSERT INTO PROJECT VALUES (2, 'Africa Flights', 'The commerce flights.');
-INSERT INTO PROJECT VALUES (3, 'Instruments Exportations', 'All the instrumentation exportations.');
-INSERT INTO PROJECT VALUES (4, 'Cargo', 'Transportations to America.');
-INSERT INTO PROJECT VALUES (5, 'Ryan Air', 'All the available flights.');
-INSERT INTO PROJECT VALUES (6, 'Project 20', 'My flight consumption simulations.');
-INSERT INTO PROJECT VALUES (7, 'Suplements', 'Simullations for suplements company.');
-INSERT INTO PROJECT VALUES (8, 'Charity', 'Charity flights.');
-INSERT INTO PROJECT VALUES (9, 'Bidings', 'Flights for bidding items');
-INSERT INTO PROJECT VALUES (10, 'FIFA', 'Flights for FIFA teams.');
-INSERT INTO PROJECT VALUES (11, 'Mining Core', 'Flights for a mining company.');
-INSERT INTO PROJECT VALUES (12, 'UK Core', 'Super secret flights.');
-INSERT INTO PROJECT VALUES (13, 'EasyJet', 'Flights of easyJet company.');
-INSERT INTO PROJECT VALUES (14, 'Jet2', 'Flights of jet2 company.');
-INSERT INTO PROJECT VALUES (15, 'Pegasus Airline', 'Flights of Pegasus Airline company.');
+INSERT INTO PROJECT (NAME, DESCRIPTION) VALUES ('Simullations Europe', 'Flight routes of europe.');
+INSERT INTO PROJECT (NAME, DESCRIPTION) VALUES ('Africa Flights', 'The commerce flights.');
+INSERT INTO PROJECT (NAME, DESCRIPTION) VALUES ('Instruments Exportations', 'All the instrumentation exportations.');
+INSERT INTO PROJECT (NAME, DESCRIPTION) VALUES ('Cargo', 'Transportations to America.');
+INSERT INTO PROJECT (NAME, DESCRIPTION) VALUES ('Ryan Air', 'All the available flights.');
+INSERT INTO PROJECT (NAME, DESCRIPTION) VALUES ('Project 20', 'My flight consumption simulations.');
+INSERT INTO PROJECT (NAME, DESCRIPTION) VALUES ('Suplements', 'Simullations for suplements company.');
+INSERT INTO PROJECT (NAME, DESCRIPTION) VALUES ('Charity', 'Charity flights.');
+INSERT INTO PROJECT (NAME, DESCRIPTION) VALUES ('Bidings', 'Flights for bidding items');
+INSERT INTO PROJECT (NAME, DESCRIPTION) VALUES ('FIFA', 'Flights for FIFA teams.');
+INSERT INTO PROJECT (NAME, DESCRIPTION) VALUES ('Mining Core', 'Flights for a mining company.');
+INSERT INTO PROJECT (NAME, DESCRIPTION) VALUES ('UK Core', 'Super secret flights.');
+INSERT INTO PROJECT (NAME, DESCRIPTION) VALUES ('EasyJet', 'Flights of easyJet company.');
+INSERT INTO PROJECT (NAME, DESCRIPTION) VALUES ('Jet2', 'Flights of jet2 company.');
+INSERT INTO PROJECT (NAME, DESCRIPTION) VALUES ('Pegasus Airline', 'Flights of Pegasus Airline company.');
