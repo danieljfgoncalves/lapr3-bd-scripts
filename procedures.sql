@@ -1,3 +1,10 @@
+-- Authors
+--
+-- Daniel Gonçalves - 1151452
+-- Eric Amaral - 1141570
+-- Ivo Ferro - 1151159
+-- Tiago Correia - 1151031
+
 -- Procedure that creates an aircraft model into a given project
 CREATE OR REPLACE PROCEDURE PC_CREATE_AIRCRAFT_MODEL
   (ID_PROJECT IN INTEGER, -- project to be inserted in
@@ -81,3 +88,20 @@ EXCEPTION
 END;
 /
 
+-- Procedure that creates an empty project
+CREATE OR REPLACE PROCEDURE PC_CREATE_EMPTY_PROJECT
+(ID_PROJECT OUT INTEGER, NAME OUT VARCHAR, DESCRIPTION OUT VARCHAR) IS
+BEGIN
+  INSERT INTO PROJECT (NAME, DESCRIPTION)
+  VALUES ('Empty project', 'This is an empty project')
+  RETURNING ID_PROJECT, NAME, DESCRIPTION
+  INTO ID_PROJECT, NAME, DESCRIPTION;
+EXCEPTION
+  WHEN NO_DATA_FOUND THEN
+    DBMS_OUTPUT.PUT_LINE('There was no data found'||SYSDATE);
+  WHEN TOO_MANY_ROWS THEN
+    DBMS_OUTPUT.PUT_LINE('Too many rows'||SYSDATE);
+  WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT_LINE('An error occured'||SYSDATE);
+END;
+/
