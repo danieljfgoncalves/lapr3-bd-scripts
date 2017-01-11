@@ -31,7 +31,7 @@ END;
 
 -- function that receives the latitude and longitude of a coordinate and returns its ID
 CREATE OR REPLACE FUNCTION FC_GET_ID_COORDINATE 
-(PARAM_LATITUDE IN FLOAT, PARAM_LONGITUDE IN FLOAT, PARAM_ID_PROJECT IN INTEGER) 
+(PARAM_LATITUDE IN DOUBLE PRECISION, PARAM_LONGITUDE IN DOUBLE PRECISION, PARAM_ID_PROJECT IN INTEGER) 
 RETURN VARCHAR IS COORDINATE_CODE_RET VARCHAR(25);
 
 BEGIN
@@ -53,6 +53,7 @@ BEGIN
      DBMS_OUTPUT.PUT_LINE('An error occured'||SYSDATE);
      
 END FC_GET_ID_COORDINATE;
+/
 
 -------------------------------------------------------------------
 
