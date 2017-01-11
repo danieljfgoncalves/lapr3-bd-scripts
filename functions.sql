@@ -65,8 +65,10 @@ BEGIN
   OPEN C1 FOR
   select ar.IATA, ar.NAME, ar.TOWN, ar.COUNTRY, ar.ALTITUDE, cd.COORDINATE_CODE, cd.LATITUDE, cd.LONGITUDE
   from AIRPORT ar, COORDINATE cd
-  where ar.ID_PROJECT = cd.ID_PROJECT
-  and ar.ID_COORDINATE = cd.ID_COORDINATE;
+  where ar.IATA = L_IATA
+  and ar.ID_PROJECT = L_ID_PROJECT
+  and ar.IATA = cd.COORDINATE_CODE
+  and ar.ID_PROJECT = cd.ID_PROJECT;
   
   RETURN C1;
   
