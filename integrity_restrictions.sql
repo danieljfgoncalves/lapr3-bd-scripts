@@ -1,0 +1,28 @@
+-- Authors
+--
+-- Daniel Gonçalves - 1151452
+-- Eric Amaral - 1141570
+-- Ivo Ferro - 1151159
+-- Tiago Correia - 1151031
+
+--------------------------------------------------------------------------------
+
+-- R1: The combination of COORDINATE_CODE and ID_PROJECT must be unique
+ALTER TABLE COORDINATE ADD CONSTRAINT U_COORDINATE
+UNIQUE (COORDINATE_CODE, ID_PROJECT);
+
+-- R2: The combination of SEGMENT_CODE and ID_PROJECT must be unique
+ALTER TABLE SEGMENT ADD CONSTRAINT U_SEGMENT
+UNIQUE (SEGMENT_CODE, ID_PROJECT);
+
+-- R3: The combination of IATA and ID_PROJECT must be unique
+ALTER TABLE AIRPORT ADD CONSTRAINT U_AIRPORT
+UNIQUE (IATA, ID_PROJECT);
+
+-- R4: The combination of MODEL_NAME and ID_PROJECT must be unique
+ALTER TABLE AIRCRAFT_MODEL ADD CONSTRAINT U_AIRCRAFT_MODEL
+UNIQUE (MODEL_NAME, ID_PROJECT);
+
+-- R5: The combination of DESIGNATOR and ID_PROJECT must be unique
+ALTER TABLE FLIGHT_INFO ADD CONSTRAINT U_FLIGHT_INFO
+UNIQUE (DESIGNATOR, ID_PROJECT);
